@@ -28,7 +28,8 @@
         }
     ],
     "devDependencies": {
-        "mocha": "*"
+        "mocha": "*",
+        "fs": "*"
     },
     "scripts": {
         "test": "make test"
