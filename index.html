@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Density : NodeJs module for calculating keyword density in a text/html" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Density</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/usablica/density">View on GitHub</a>
+
+          <h1 id="project_title">Density</h1>
+          <h2 id="project_tagline">NodeJs module for calculating keyword density in a text/html</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/usablica/density/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/usablica/density/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Density</h1>
+
+<p>NodeJs module for calculating keyword density in a text/html</p>
+
+<h2>Install</h2>
+
+<pre><code>npm install density
+</code></pre>
+
+<h2>How to use</h2>
+
+<div class="highlight"><pre><span class="nx">density</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">).</span><span class="nx">getDensity</span><span class="p">();</span> <span class="c1">//plain text</span>
+<span class="nx">density</span><span class="p">(</span><span class="s2">"&lt;b&gt;Hello&lt;/b&gt; &lt;i&gt;World&lt;/i&gt; hello all"</span><span class="p">).</span><span class="nx">getDensity</span><span class="p">();</span> <span class="c1">//HTML</span>
+</pre></div>
+
+<h3>Output</h3>
+
+<p>The output of <code>density</code> is something like this:  </p>
+
+<div class="highlight"><pre><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">"word"</span><span class="p">:</span> <span class="s2">"world"</span><span class="p">,</span>
+        <span class="nt">"count"</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">"word"</span><span class="p">:</span> <span class="s2">"hello"</span><span class="p">,</span>
+        <span class="nt">"count"</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+<h2>API</h2>
+
+<h3>density(inputStr)</h3>
+
+<p>Creating an density object.</p>
+
+<p><strong>Available since</strong>: v0.1.0</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+<li>inputStr : String
+Given input to parse/calculate.</li>
+</ul><p><strong>Returns:</strong></p>
+
+<ul>
+<li>density object.</li>
+</ul><p><strong>Example:</strong></p>
+
+<div class="highlight"><pre><span class="nx">density</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">)</span>
+</pre></div>
+
+<h3>getDensity()</h3>
+
+<p>Calculate the density of keywords.</p>
+
+<p><strong>Available since</strong>: v0.1.0</p>
+
+<p><strong>Returns:</strong></p>
+
+<ul>
+<li>An object that contains the density of keywords.</li>
+</ul><p><strong>Example:</strong></p>
+
+<div class="highlight"><pre><span class="nx">density</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">).</span><span class="nx">getDensity</span><span class="p">()</span>
+</pre></div>
+
+<h3>setOption(option, value)</h3>
+
+<p>Set a single option to density</p>
+
+<p><strong>Available since</strong>: v0.1.0</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+<li><p>option : String
+Option key name.</p></li>
+<li><p>value : String/Number
+Value of the option.</p></li>
+</ul><p><strong>Returns:</strong></p>
+
+<ul>
+<li>density object</li>
+</ul><h3>setOptions(options)</h3>
+
+<p>Set options to the density object.</p>
+
+<p><strong>Available since</strong>: v0.1.0</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+<li>options : Object
+Object that contains option keys with values.</li>
+</ul><p><strong>Returns:</strong></p>
+
+<ul>
+<li>density object</li>
+</ul><p><strong>Example:</strong></p>
+
+<div class="highlight"><pre><span class="nx">density</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">).</span><span class="nx">setOptions</span><span class="p">({</span> <span class="nx">minKeywordLength</span><span class="o">:</span> <span class="mi">5</span> <span class="p">});</span>
+</pre></div>
+
+<h2>Author</h2>
+
+<p><strong>Afshin Mehrabani</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/afshinmeh">Twitter</a></li>
+<li><a href="https://github.com/afshinm">Github</a></li>
+<li>
+<a href="http://afshinm.name/">Personal page</a><br>
+</li>
+</ul><h2>License</h2>
+
+<blockquote>
+<p>Copyright (C) 2012 Afshin Mehrabani (<a href="mailto:afshin.meh@gmail.com">afshin.meh@gmail.com</a>)</p>
+</blockquote>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Density maintained by <a href="https://github.com/usablica">usablica</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
