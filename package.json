@@ -1,0 +1,37 @@
+{
+    "name": "density",
+    "version": "0.1.0",
+    "description": "Calculating keyword density in a text/html",
+    "homepage": "https://github.com/usablica/density",
+    "author": "Afshin Mehrabani <afshin.meh@gmail.com> (http://afshinm.name/)",
+    "keywords": [
+        "keyword",
+        "tag",
+        "density",
+        "natural",
+        "language"
+    ],
+    "main": "./density.js",
+    "engines": {
+        "node": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/usablica/density.git"
+    },
+    "bugs": {
+        "url": "https://github.com/usablica/density/issues"
+    },
+    "licenses" : [
+        {
+            "type" : "MIT"
+        }
+    ],
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "scripts": {
+        "test": "make test"
+    },
+    "ender": "./ender.js"
+}
