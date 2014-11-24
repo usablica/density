@@ -22,7 +22,7 @@
 
     //default options
     this._options = {
-      stopWordFile: "stopwords.json",
+      stopWordFile: __dirname + "/stopwords.json",
       minKeywordLength: 2,
       maxKeywordLength: 50
     };
